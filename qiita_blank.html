@@ -14,8 +14,8 @@
             <input type="text" v-model="keyword">
         </p>
         <ul>
-            <li v-model="item in items">
-                <a v-model:href="item.url" target="_blank">
+            <li v-for="item in items">
+                <a v-bind:href="item.url" target="_blank">
                     {{ item.title }}                
                 </a>
                 likes: {{ item.likes_count }}
